@@ -33,5 +33,8 @@ public class Client {
         // 恋爱时的反应
         Amativeness v3 = new Amativeness();
         o.display(v3);
+
+        // Marriage v4 = new Marriage();
+        // o.display(v4);
     }
 }
