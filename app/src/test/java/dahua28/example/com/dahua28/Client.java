@@ -5,6 +5,13 @@ import java.util.List;
 
 import org.junit.Test;
 
+import dahua28.example.com.dahua28.action.Amativeness;
+import dahua28.example.com.dahua28.action.Failing;
+import dahua28.example.com.dahua28.action.Success;
+import dahua28.example.com.dahua28.person.Man;
+import dahua28.example.com.dahua28.person.Person;
+import dahua28.example.com.dahua28.person.Woman;
+
 /**
  * Created by ac.hsu on 2019/1/23.
  * Mail: ac.hsu@104.com.tw
@@ -13,34 +20,18 @@ import org.junit.Test;
 public class Client {
     @Test
     public void maiin() {
-        List<Person> persons = new ArrayList<>();
+        ObjectStructure o = new ObjectStructure();
+        o.attach(new Man());
+        o.attach(new Woman());
 
-        Person man1 = new Man();
-        man1.setAction("成功");
-        persons.add(man1);
-
-        Person woman1 = new Woman();
-        woman1.setAction("成功");
-        persons.add(woman1);
-
-        Person man2 = new Man();
-        man2.setAction("失败");
-        persons.add(man2);
-
-        Person woman2 = new Woman();
-        woman2.setAction("失败");
-        persons.add(woman2);
-
-        Person man3 = new Man();
-        man3.setAction("恋爱");
-        persons.add(man3);
-
-        Person woman3 = new Woman();
-        woman3.setAction("恋爱");
-        persons.add(woman3);
-
-        for (Person person : persons) {
-            person.getConclusion();
-        }
+        // 成功时的反应
+        Success v1 = new Success();
+        o.display(v1);
+        // 失败时的反应
+        Failing v2 = new Failing();
+        o.display(v2);
+        // 恋爱时的反应
+        Amativeness v3 = new Amativeness();
+        o.display(v3);
     }
 }
