@@ -1,6 +1,6 @@
 package dahua28.example.com.dahua28.person;
 
-import dahua28.example.com.dahua28.action.Action;
+import dahua28.example.com.dahua28.action.Visitor;
 
 /**
  * Created by ac.hsu on 2019/1/23.
@@ -10,5 +10,5 @@ import dahua28.example.com.dahua28.action.Action;
 public abstract class Person {
     // 接受
     // 他是用来获得 '状态' 对象的.
-    public abstract void accept(Action visitor);
+    public abstract void accept(Visitor visitor);
 }

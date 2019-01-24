@@ -3,7 +3,7 @@ package dahua28.example.com.dahua28;
 import java.util.ArrayList;
 import java.util.List;
 
-import dahua28.example.com.dahua28.action.Action;
+import dahua28.example.com.dahua28.action.Visitor;
 import dahua28.example.com.dahua28.person.Person;
 
 /**
@@ -22,7 +22,7 @@ public class ObjectStructure {
         elements.remove(element);
     }
     // 查看显示
-    public void display(Action visitor) {
+    public void display(Visitor visitor) {
         for (Person e : elements) {
             e.accept(visitor);
         }
