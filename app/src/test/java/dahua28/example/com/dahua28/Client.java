@@ -34,6 +34,7 @@ public class Client {
         Amativeness v3 = new Amativeness();
         o.display(v3);
 
+        // 對於婚姻的反應
         // Marriage v4 = new Marriage();
         // o.display(v4);
     }
